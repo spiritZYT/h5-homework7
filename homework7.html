@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con div{
+            width:200px;
+            height:60px;
+            line-height:60px;
+            text-align:center;
+        }
+        .con div:nth-child(1){
+            background:lightpink;
+        }
+        .con div:nth-child(2){
+            background:lightsalmon;
+        }
+        .con div:nth-child(3){
+            background:lightskyblue;
+        }
+        .con div:nth-child(4){
+            background:limegreen;
+        }
+
+        @media screen and (min-width:1200px){
+            .con {
+                display:flex;
+                flex-direction:row;
+                justify-content:center;
+            }
+        }
+       @media screen and (min-width:992px) and (max-width:1200px){
+            .con{
+                margin:0 auto;
+                width:600px;
+                display:flex;
+                flex-wrap:wrap; 
+            }
+            .con div:nth-child(1){
+                width:600px;
+            }
+            
+        }
+         @media screen and (min-width:768px) and (max-width:992px){
+            .con{
+                margin:0 auto;
+                width:400px;
+                display:flex;
+                flex-wrap:wrap; 
+            }
+        }
+         @media screen and (max-width:768px){
+            .con {
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+            }
+        } 
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>
